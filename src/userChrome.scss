@@ -1,0 +1,59 @@
+@import 'variables/colors';
+@import 'mixins/utilities';
+@import 'components/toolbar';
+@import 'components/tabs';
+@import 'components/sidebar';
+
+// Root styling for minimal theme
+:root {
+  --primary-bg: #{$bg-primary};
+  --secondary-bg: #{$bg-secondary};
+  --text-primary: #{$text-primary};
+  --accent: #{$accent};
+
+  @media (prefers-color-scheme: dark) {
+    --primary-bg: #{$bg-primary-dark};
+    --secondary-bg: #{$bg-secondary-dark};
+    --text-primary: #{$text-primary-dark};
+    --accent: #{$accent-dark};
+  }
+}
+
+// Global minimal styles
+* {
+  margin: 0;
+  padding: 0;
+}
+
+// Hide unnecessary UI elements for minimal look
+#main-window {
+  background-color: var(--primary-bg) !important;
+}
+
+// Smooth transitions
+* {
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+// Remove visual clutter
+.browser-toolbar {
+  border: none !important;
+}
+
+// Clean scrollbars
+scrollbar {
+  width: 8px !important;
+}
+
+scrollbar-thumb {
+  background-color: var(--secondary-bg) !important;
+  border-radius: 4px !important;
+
+  &:hover {
+    background-color: var(--accent) !important;
+  }
+}
+
+scrollbar-track {
+  background-color: transparent !important;
+}
