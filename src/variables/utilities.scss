@@ -1,0 +1,102 @@
+// SCSS Utilities and Mixins for Minifox
+
+// Mixin: Flexbox center
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Mixin: Flexbox between
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Mixin: Transition helper
+@mixin transition($property: all, $duration: $transition-base) {
+  transition: $property $duration;
+}
+
+// Mixin: Text truncate
+@mixin truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Mixin: Absolute center
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Mixin: Remove default appearance
+@mixin reset-appearance {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+
+// Mixin: Hover effect
+@mixin hover-effect($color: $accent) {
+  cursor: pointer;
+  @include transition;
+
+  &:hover {
+    background-color: $color;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+// Mixin: Focus styles
+@mixin focus-ring($color: $accent, $offset: 2px) {
+  &:focus {
+    outline: 2px solid $color;
+    outline-offset: $offset;
+  }
+
+  &:focus:not(:focus-visible) {
+    outline: none;
+  }
+}
+
+// Mixin: Responsive breakpoint
+@mixin media-query($breakpoint) {
+  @if $breakpoint == 'sm' {
+    @media (max-width: 576px) {
+      @content;
+    }
+  } @else if $breakpoint == 'md' {
+    @media (max-width: 768px) {
+      @content;
+    }
+  } @else if $breakpoint == 'lg' {
+    @media (max-width: 992px) {
+      @content;
+    }
+  }
+}
+
+// Mixin: Dark mode
+@mixin dark-mode {
+  @media (prefers-color-scheme: dark) {
+    @content;
+  }
+}
+
+// Mixin: Light mode
+@mixin light-mode {
+  @media (prefers-color-scheme: light) {
+    @content;
+  }
+}
