@@ -1,0 +1,93 @@
+// Tab Bar Styling
+// Customize the Firefox tab bar appearance
+
+// Tab bar container
+#TabsToolbar {
+  background-color: var(--primary-bg) !important;
+  border-bottom: 1px solid var(--secondary-bg) !important;
+  padding: 0 !important;
+  min-height: 32px !important;
+}
+
+// Individual tab styling
+.tabbrowser-tab {
+  background-color: var(--secondary-bg) !important;
+  border: none !important;
+  margin: $spacing-sm $spacing-xs 0 0 !important;
+  border-radius: $radius-md $radius-md 0 0 !important;
+  @include transition;
+  color: var(--text-primary) !important;
+
+  &:hover {
+    background-color: var(--bg-tertiary) !important;
+  }
+
+  &[selected] {
+    background-color: var(--primary-bg) !important;
+    border-bottom: 2px solid var(--accent) !important;
+  }
+
+  &[multiselected] {
+    background-color: var(--bg-tertiary) !important;
+  }
+}
+
+// Tab label
+.tab-label {
+  font-size: $font-size-sm !important;
+  color: var(--text-primary) !important;
+  @include truncate;
+}
+
+// Tab close button (X button)
+.tab-close-button {
+  border-radius: $radius-sm !important;
+  margin: 0 $spacing-xs !important;
+  opacity: 0.6;
+  @include transition;
+
+  &:hover {
+    background-color: var(--accent) !important;
+    opacity: 1;
+  }
+}
+
+// New tab button
+#new-tab-button {
+  border-radius: $radius-md !important;
+  margin: $spacing-sm !important;
+  @include transition;
+
+  &:hover {
+    background-color: var(--secondary-bg) !important;
+  }
+}
+
+// Tab scrolling buttons (when tabs overflow)
+.tabbrowser-arrowscrollbox > scrollbutton {
+  border-radius: $radius-md !important;
+  margin: $spacing-sm !important;
+  opacity: 0.7;
+
+  &:hover {
+    background-color: var(--secondary-bg) !important;
+    opacity: 1;
+  }
+}
+
+// Active tab indicator
+.tab-line {
+  background-color: var(--accent) !important;
+  height: 2px !important;
+}
+
+// Tab background image (for favicons)
+.tab-icon-image {
+  border-radius: $radius-sm !important;
+  margin: 0 $spacing-sm 0 0 !important;
+}
+
+// Sound indicator
+.tab-icon-sound {
+  border-radius: $radius-sm !important;
+}
