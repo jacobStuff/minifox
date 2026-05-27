@@ -1,0 +1,126 @@
+// Sidebar Styling
+// Customize the Firefox sidebar appearance
+
+// Sidebar container
+#sidebar {
+  background-color: var(--primary-bg) !important;
+  border-right: 1px solid var(--secondary-bg) !important;
+}
+
+// Sidebar header
+#sidebar-header {
+  background-color: var(--secondary-bg) !important;
+  border-bottom: 1px solid var(--secondary-bg) !important;
+  padding: $spacing-md !important;
+  min-height: 32px !important;
+}
+
+// Sidebar title
+#sidebar-title {
+  color: var(--text-primary) !important;
+  font-size: $font-size-base !important;
+  font-weight: 500;
+}
+
+// Sidebar close button
+#sidebar-close {
+  border-radius: $radius-md !important;
+  @include transition;
+  opacity: 0.7;
+
+  &:hover {
+    background-color: var(--secondary-bg) !important;
+    opacity: 1;
+  }
+}
+
+// Sidebar box (content area)
+#sidebar-box {
+  background-color: var(--primary-bg) !important;
+}
+
+// Sidebar panel (different sidebar types)
+#sidebar-panel {
+  background-color: var(--primary-bg) !important;
+}
+
+// Bookmarks tree
+#bookmarks-view {
+  background-color: var(--primary-bg) !important;
+  color: var(--text-primary) !important;
+
+  treeitem {
+    color: var(--text-primary) !important;
+
+    &:hover {
+      background-color: var(--secondary-bg) !important;
+    }
+
+    &[selected] {
+      background-color: var(--bg-tertiary) !important;
+    }
+  }
+}
+
+// History tree
+#history-tree {
+  background-color: var(--primary-bg) !important;
+  color: var(--text-primary) !important;
+
+  treeitem {
+    color: var(--text-primary) !important;
+
+    &:hover {
+      background-color: var(--secondary-bg) !important;
+    }
+
+    &[selected] {
+      background-color: var(--bg-tertiary) !important;
+    }
+  }
+}
+
+// Sidebar tabs (switcher)
+.sidebar-switcher-button {
+  border-radius: $radius-md !important;
+  margin: $spacing-xs !important;
+  @include transition;
+  opacity: 0.7;
+
+  &:hover {
+    background-color: var(--secondary-bg) !important;
+    opacity: 1;
+  }
+
+  &[checked] {
+    background-color: var(--accent) !important;
+    opacity: 1;
+  }
+}
+
+// Tree items styling
+treeitem {
+  color: var(--text-primary) !important;
+
+  &:hover {
+    background-color: var(--secondary-bg) !important;
+  }
+
+  &[selected] {
+    background-color: var(--bg-tertiary) !important;
+  }
+}
+
+// Scrollbar in sidebar
+#sidebar scrollbar-thumb {
+  background-color: var(--secondary-bg) !important;
+  border-radius: $radius-sm !important;
+
+  &:hover {
+    background-color: var(--accent) !important;
+  }
+}
+
+#sidebar scrollbar-track {
+  background-color: transparent !important;
+}
