@@ -1,0 +1,97 @@
+// Toolbar & Address Bar Styling
+// Customize the Firefox toolbar and navigation bar
+
+// Main toolbar styling
+.browser-toolbar {
+  background-color: var(--primary-bg) !important;
+  border-bottom: 1px solid var(--secondary-bg) !important;
+  padding: $spacing-md 0 !important;
+  min-height: 40px !important;
+}
+
+// Address bar
+#urlbar {
+  background-color: var(--secondary-bg) !important;
+  border: 1px solid var(--secondary-bg) !important;
+  border-radius: $radius-md !important;
+  margin: 0 $spacing-md !important;
+
+  &:hover {
+    background-color: var(--secondary-bg) !important;
+  }
+
+  &:focus-within {
+    border-color: var(--accent) !important;
+  }
+}
+
+// Address bar input
+#urlbar-input {
+  color: var(--text-primary) !important;
+  font-size: $font-size-base !important;
+}
+
+// Search bar
+#searchbar {
+  background-color: var(--secondary-bg) !important;
+  border-radius: $radius-md !important;
+  margin: 0 $spacing-sm !important;
+}
+
+// Toolbar buttons (back, forward, reload, etc.)
+.toolbarbutton-1 {
+  border-radius: $radius-md !important;
+  margin: 0 $spacing-xs !important;
+  @include transition;
+
+  &:hover {
+    background-color: var(--secondary-bg) !important;
+  }
+
+  &:active {
+    background-color: var(--secondary-bg) !important;
+  }
+}
+
+// Navigation buttons
+#back-button,
+#forward-button {
+  opacity: 0.8;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// Reload button
+#reload-button {
+  @include transition;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// Home button
+#home-button {
+  @include transition;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+// Menu button
+#appMenu-button {
+  border-radius: $radius-md !important;
+  margin-left: $spacing-md !important;
+
+  &:hover {
+    background-color: var(--secondary-bg) !important;
+  }
+}
+
+// Spacer elements
+.toolbarspring {
+  background-color: transparent !important;
+}
