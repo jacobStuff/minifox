@@ -1,0 +1,24 @@
+{
+  "name": "minifox",
+  "version": "1.0.0",
+  "description": "A minimal Firefox UI customization theme",
+  "main": "dist/userChrome.css",
+  "scripts": {
+    "build": "sass src/userChrome.scss dist/userChrome.css",
+    "watch": "sass --watch src:dist",
+    "validate": "sass --check src/userChrome.scss",
+    "test": "echo \"No tests configured yet\""
+  },
+  "keywords": [
+    "firefox",
+    "userchrome",
+    "theme",
+    "css",
+    "minimal"
+  ],
+  "author": "jacobStuff",
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "sass": "^1.69.0"
+  }
+}
